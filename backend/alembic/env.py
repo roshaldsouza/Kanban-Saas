@@ -6,7 +6,9 @@ import os
 
 # So Alembic can find your app/ folder
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
+from app.core.database import Base
+from app.core.config import settings
+from app.users.models import User  # noqa: F401
 from app.core.database import Base
 from app.core.config import settings
 
